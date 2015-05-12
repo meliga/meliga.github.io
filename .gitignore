@@ -1,0 +1,6 @@
+.DS_Store
+.sass-cache
+Gemfile.lock
+DMeliga
+bower_components
+node_modules
