@@ -3,9 +3,11 @@ Project: Vortex
 Version: 1.0.1
 ------------------------------------------------------------------ */
 @import url("slider.css");
-@import url("http://fonts.googleapis.com/css?family=Dosis");
+@import url("http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700");
 @import url("http://fonts.googleapis.com/css?family=Libre+Baskerville:400italic");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700");
+@import url("http://fonts.googleapis.com/css?family=Montserrat:100, 300, 400");
+@import url("http://fonts.googleapis.com/css?family=Inconsolata:100, 400,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,400italic,700");
 
 /* ------------------------------------------------------------------
 General Styles
@@ -33,17 +35,17 @@ Selection
 ------------------------------------------------------------------ */
 
 ::-moz-selection {
-	background: #000;
+	background: #fff;
 	color: #fff;
 }
 
 ::-webkit-selection {
-	background: #000;
+	background: #fff;
 	color: #fff;
 }
 
 ::selection {
-	background: #000;
+	background: #fff;
 	color: #fff;
 }
 
@@ -884,7 +886,7 @@ Owl sliders
 .owl-carousel .owl-controls .owl-buttons .owl-prev,
 .owl-carousel .owl-controls .owl-buttons .owl-next {
 	position: absolute;
-	background: #fff;
+	background: #626366;
 	display: block;
 	height: 40px;
 	width: 40px;
@@ -895,7 +897,7 @@ Owl sliders
 	text-align: center;
 	line-height: 40px;
 	font-size: 17px;
-	color: #111;
+	color: #ffffff;
 	-webkit-border-radius: 2px;
 	   -moz-border-radius: 2px;
 	        border-radius: 2px;
@@ -1335,6 +1337,18 @@ Home Section
 	font-size: 36px;
 }
 
+.module-hero .font-inc {
+  font-family: "Inconsolata", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.module-hero .font-alt {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 
 /* ------------------------------------------------------------------
 Modules
@@ -1446,17 +1460,74 @@ Works grid
 /* ------------------------------------------------------------------
 Portfolio Modal
 ------------------------------------------------------------------- */
-
-.modal-header{
-	border: 0px
+.modal {
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background: rgb(255, 255, 255);  // url(../images/loader-folio.gif) no-repeat center center;
 }
 
-.modal-content{
-	border: 0px;
-	box-shadow: none !important
+.modal.modal-fullscreen .modal-dialog {
+  margin: 0;
+  width: 100%;
+  height: 100%;
 }
 
+.modal.modal-fullscreen .modal-content {
+  border: none;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: inherit;
+  -moz-box-shadow: inherit;
+  -o-box-shadow: inherit;
+  box-shadow: inherit;
+}
 
+.modal .loadernav {
+  display: block;
+  width: 60px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  margin-left: 490px;
+  z-index: 99999999;
+}
+
+.modal .mfp-close {
+	position: absolute;
+  right: 20px;
+  top: 20px;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 40px;
+  color: #000;
+}
+
+.modal h1.title-modal{
+	font-family: 'Dosis';
+  font-weight: 200;
+  font-size: 40px;
+  margin: 0;
+  color: #afac9e ;
+  text-transform: uppercase;
+}
+
+.modal span.role {
+  height: 2px;
+  background: #fbae17;
+  width: 60px;
+  display: block;
+  margin: 0 0 0 7px;
+}
 /* ------------------------------------------------------------------
 Works item
 ------------------------------------------------------------------- */
