@@ -3,42 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <title>meliga | front end design</title>
+    <!- Google Fonts ->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
+
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            list-style:none;
+            vertical-align:baseline;
+        }
+
+        html, body {
+            height: 100%;
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 2em;
+            color: rgba(176, 173, 159, .9);
+        }
+
+        .wrapper {
+            height: 100%;
+            min-height: 100%;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-align-items: center;
+            align-items: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            flex-direction: Column;
+        }
+        a, p{
+            width: 700px;
+            margin-bottom: 10px;
+        }
+
+        a{
+            font-size: 75%;
+            font-weight: 100;
+            text-decoration: none;
+            color: rgba(176, 173, 159, 1);
+        }
+
+        p{
+            margin-top: 10px;
+            text-align: right;
+            font-size: 45%;
+            font-weight: 100;
+        }
+
+    </style>
 </head>
-<style>
-
-    * {
-        margin:0;
-        padding:0;
-        list-style:none;
-        vertical-align:baseline;
-    }
-
-    html, body {
-        height: 100%;
-        min-height: 100%;
-    }
-
-    body {
-        font: 15px arial;
-        color: rgba(0, 0, 0, .7);
-    }
-
-    .wrapper {
-        height: 100%;
-        min-height: 100%;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-align-items: center;
-        align-items: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-    }
-</style>
 <body>
     <div class="wrapper">
+        <a href="https://github.com/meliga">@meliga ☎</a>
         <object type="image/svg+xml" data="http://ghchart.rshah.org/meliga" class="meliga commits">
             @meliga commits <!-- fallback image in CSS -->
         </object>
+        <p>FrontEndDesign</p>
     </div>
 </body>
+<script type="text/javascript" >
+//    var elements = document.querySelector('object');
+//    var text = elements.contentDocument;
+//    var elementsTexts = [];
+//    for(cont=0; cont > elements.length; cont++){
+//        elementsTexts.push(elements[cont].fill);
+//    }
+//    console.log(text);
+
+
+</script>
 </html>
