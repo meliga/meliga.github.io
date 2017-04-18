@@ -2,15 +2,15 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>meliga | front end design</title>
+    <title>meliga | FrontEndDesign</title>
     <!- Google Fonts ->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
     <link rel="stylesheet" type="text/css" href="css/base.css">
 </head>
 <body>
     <div class="wrapper">
-        <a href="https://github.com/meliga">@meliga ☎</a>
-        <object type="image/svg+xml" data="http://ghchart.rshah.org/meliga" class="meliga commits">
+        <header><a href="https://github.com/meliga" class="github-link">diedromeliga</a><a href="tel:+5521964981100" class="me-liga">☎</a></header>
+        <object onload="carregarSVG()" type="image/svg+xml" data="http://ghchart.rshah.org/meliga" class="meliga commits">
             @meliga commits <!-- fallback image in CSS -->
         </object>
         <p>FrontEndDesign</p>
@@ -78,7 +78,17 @@
         </svg>
     </div>
 </body>
-<script type="text/javascript" >
+<script type="text/javascript">
+
+    function carregarSVG() {
+        console.log(document.querySelectorAll("object"))
+        document.querySelectorAll("text")
+                .forEach(function (item) {
+                    console.log(item);
+                    item.style.display = "none";
+                });
+    }
+
 //    var elements = document.querySelector('object');
 //    var text = elements.contentDocument;
 //    var elementsTexts = [];

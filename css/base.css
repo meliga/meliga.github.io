@@ -28,13 +28,12 @@ body {
     justify-content: center;
     flex-direction: Column;
 }
-a, p{
+p, header{
     width: 700px;
-    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 768px)  {
-    a, p{
+    p{
         width: 90%;
         margin-bottom: 10px;
     }
@@ -48,17 +47,24 @@ a, p{
     }
 }
 
+header p{
+    text-align: left;
+}
 a{
-    font-size: 75%;
     font-weight: 100;
+    font-size: 70%;
     text-decoration: none;
     color: rgba(176, 173, 159, 1);
 }
 
+.me-liga{
+    margin-left: 5px;
+}
+
 p{
-    margin-top: 10px;
-    text-align: right;
+    margin-top: 5px;
     font-size: 45%;
+    text-align: right;
     font-weight: 100;
 }
 #social-icons{
