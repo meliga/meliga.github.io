@@ -5,10 +5,37 @@
     <title>meliga | front end design</title>
 </head>
 <style>
-    
+
+    * {
+        margin:0;
+        padding:0;
+        list-style:none;
+        vertical-align:baseline;
+    }
+
+    html, body {
+        height: 100%;
+        min-height: 100%;
+    }
+
+    body {
+        font: 15px arial;
+        color: rgba(0, 0, 0, .7);
+    }
+
+    .wrapper {
+        height: 100%;
+        min-height: 100%;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
 </style>
 <body>
-    <div class="container">
+    <div class="wrapper">
         <object type="image/svg+xml" data="http://ghchart.rshah.org/meliga" class="meliga commits">
             @meliga commits <!-- fallback image in CSS -->
         </object>
