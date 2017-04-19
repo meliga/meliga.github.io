@@ -10,10 +10,8 @@
 </head>
 <body>
 <div class="wrapper">
-    <header><a href="https://github.com/meliga" class="github-link">diedromeliga</a><a href="tel:+5521964981100" class="me-liga">☎</a></header>
-    <object type="image/svg+xml" data="http://ghchart.rshah.org/meliga" class="meliga commits">
-        @meliga commits <!-- fallback image in CSS -->
-    </object>
+    <header><a href="https://github.com/{{ site.github_username }}" class="github-link">diedromeliga</a><a href="tel:+5521964981100" class="me-liga">☎</a></header>
+    {% githubchart site.github_username %}
     <p>FrontEndDesign</p>
 </div>
 <div class="social-icons">
@@ -63,7 +61,7 @@
                 C61.489,15.365,63.589,15.372,65.704,15.47z"/>
         </g>
 
-        <a xlink:href="https://github.com/meliga">
+        <a xlink:href="https://github.com/{{ site.github_username }}">
             <g>
                 <circle fill="#959799" cx="22.539" cy="16.492" r="16"/>
                 <path fill="#FFFFFF" d="M26.708,31.421c0-0.559,0.021-2.337,0.021-4.552c0-1.551-0.517-2.543-1.117-3.061
