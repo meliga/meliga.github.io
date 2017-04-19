@@ -1,0 +1,26 @@
+language: ruby
+rvm:
+- 2.4.1
+script:
+- bundle exec jekyll build
+- bundle exec htmlproofer ./_site --disable-external
+branches:
+  only:
+  - devel
+after_success:
+- git clone https://$GITHUB_REPO
+- cd $(basename ${GITHUB_REPO%.git})
+- git config user.name "Travis CI"
+- git config user.email ${EMAIL}
+- rsync -az --delete --exclude '.git*' ../_site/ .
+- touch .nojekyll
+- git add -A .
+- git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO: github.com/hugoleodev/hugoleodev.github.io.git
+  - REPO_TARGET_BRANCH: master
+  - secure: U76dBBR3PhVW6AFYY/WBIo7xPIogfKYtP/DTWi/jBvToIoGJ5YbyIKQ/aCqnKqBAfl4DkcGGFSKUX+cjeD7rWFcvnU/5YLV4YPVKq2uIKK3tI3OajmG/J5VN1GOVmhGJXMSLxINnoXdFAMl5vwevfb/IJ4tNduivfO7+DW0EqZyguREt+6VkrBFHlFy0jqxiJfAbMBGB/eByidGv3g4Vjw4xEBq6vswzu7U/YCxjl9MH8+wddEu5Cs5xB8yFxBzaPBkSHjutZBl2dcnz4AIC92GL/R9aplFoyllWTOcAeCO7OqMc+DGTE/s48oZkNTwF6aeap5PTBUZ5cmEgKbenfVBRC+p0gTseYNOdZzq71utd+OuVOSs0/M+Zm88NbqFgIE7/6ZZceI959xTMgDNSVoBa8TDBx3r6V/l4qTjTTAyTFkP5cwk5+jpBItkgc163cqh/gYVao6I4ab9IFy5+2Ccp4Som8AnqCC+W4OfGimUZ/ZFMT4irh2fLOYY8Zpkk/13afJ6tcT2QmF6tRycajbfGJkbIMYjWZxVaSRJKFUQ6SQiQ8uYbiZruOdRpF0QAfQ+6HbO+neEiSwORAnp5V7HzzKyf1NEofRTUDkCIEcyKvqR18m28B8mWglHaeyuKbfpspY8LpTmaPsixPG7IWtQuYUkoL4zFOLYKmjIwIe8=
+  - secure: mJH/rYCRZKSZgS8DiHzPc1v6gvXf0VQRp+dbHEw8fhNg7xfaa575y9GOa+WCGmyl5DcTqT4Kp1em541zv57zUe7qd86Ys+pO9dQuDRZovH6sJCf35mwBrcWifW5fY7Wj0lBE4s/F3N2B46CitLVThezM8KlSw2pfEk1l2KJ79a/SoOdQB8g479eAFzxqW5iRpqlvDOzIFzF8BOEWe+6s9WfcW972cdHrqaueaCRspjzxBUZXLCiXHrd2eC7/SODPDhg9f0SlsRHXnIIWy8TK1KQErlimY99LXWTW4G7uSDECKFJdLMByPSxEQzBeIhOuXd0oqY6LYOx3ZZVnKmZOLNfzr/L346WUQ6cOkAtfirjMbn1ra6zOeGaiGolPXS3D+gMpUsTnSNiIkObL5tGHdLryH904gUQnS0iaJhIVFTFsJPGr2NQKTDj3rdaQSR6+sTpqi6cDUtowqv0ej/YNC644q7HcdegLXOt77RMeB7yB1FgHxrBlrlhm1J7t8kl2Vrp5A2pPpvU7r01Tr2/DpuaGPUQ5egyibwnBrwdb4ZrPJthcxh6NiKUnaERKXgob4LmDB5TII0XKT8akVu1/UBBEWuBzTzIGMJtHDMnf0q/DO9oY15LjW3ESbGpSzy2gpqpku9mthdSPbyhFg26NfsVZ4IMJSxytheQm3GwtW4c=
