@@ -5,8 +5,10 @@ description: > # this means to ignore newlines until "baseurl:"
   plataforma que reúne as melhores e mais criativas lojas de móveis e artigos de decoração.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: http://diedromeliga.com.br # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: diedromeliga
+default_username: diedromeliga
 github_username:  meliga
+linkedin_username:  meliga
+medium_username: @diedromeliga
 
 # Build settings
 markdown: kramdown
