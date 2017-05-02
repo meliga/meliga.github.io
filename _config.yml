@@ -8,7 +8,7 @@ url: http://diedromeliga.com.br # the base hostname & protocol for your site, e.
 default_username: diedromeliga
 github_username:  meliga
 linkedin_username:  meliga
-medium_username: @diedromeliga
+medium_username: diedromeliga
 
 # Build settings
 markdown: kramdown
