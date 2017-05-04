@@ -7,7 +7,7 @@ gem "minima", "~> 2.0"
 gem "html-proofer"
 
 group :jekyll_plugins do
-   gem 'githubchart', github: 'hugoleodev/githubchart'
+   gem 'githubchart', github: 'meliga/githubchart'
    gem "jekyll-feed", "~> 0.6"
 end
 
