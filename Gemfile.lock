@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/hugoleodev/githubchart.git
+  remote: git://github.com/meliga/githubchart.git
   revision: 30e2c9a57359e3433498bda64b2d07fd7de76f11
   specs:
     githubchart (2.0.1)
