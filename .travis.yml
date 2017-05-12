@@ -1,26 +1,26 @@
 language: ruby
 rvm:
-  - 2.4.1
+- 2.4.1
 script:
-  - bundle exec jekyll build
-  - bundle exec htmlproofer ./_site --disable-external
+- bundle exec jekyll build
+- bundle exec htmlproofer ./_site --disable-external
 branches:
   only:
-    - devel
+  - devel
 after_success:
-  - git clone https://$GITHUB_REPO
-  - cd $(basename ${GITHUB_REPO%.git})
-  - git config user.name "Travis CI"
-  - git config user.email ${EMAIL}
-  - rsync -az --delete --exclude '.git*' ../_site/ .
-  - touch .nojekyll
-  - git add -A .
-  - git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
-  - git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
+- git clone https://$GITHUB_REPO
+- cd $(basename ${GITHUB_REPO%.git})
+- git config user.name "Travis CI"
+- git config user.email ${EMAIL}
+- rsync -az --delete --exclude '.git*' ../_site/ .
+- touch .nojekyll
+- git add -A .
+- git commit -m "Generated Jekyll site by Travis CI - ${TRAVIS_BUILD_NUMBER}"
+- git push --force "https://${DEPLOY_KEY}@${GITHUB_REPO}" HEAD:${REPO_TARGET_BRANCH}
 env:
   global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - GITHUB_REPO: github.com/meliga/meliga.github.io.git
-    - REPO_TARGET_BRANCH: master
-    - secure: Mh3iyU9ibdRQge7RZXUAakyXPkG6nlP4NM/+kjRD3//QYJH2qByDfM25ykug0OFAH+/TcXQojmBN8Jznj0PqZM/bjDCpg5lOfmZ4YXZaO9vIHo45tBeCOHw6ouKkMaFKMACN2bq4Wr2UOe5cUqE76aHEVL2cWb0L1AlhBdd52shdhiHFkmFTkN4BLM/6CS0Vgw6lXxMLuOj5hqt9z9xFho8exflT7C5UIBoYeiTkmREZ4lxJ+Mzw++buP3L0l2iMTJ1pAuznRELkZM6pDZ4Lb3eQhpnp3H7o1iCPPzHWrgac4p7SRmjuuLdc0lijDY8Ywnd9+oUO0hkUTOimKwEAZWAelFJaervBfbnIX6dAKnGb3PY1FIyCi2Y91paG9NC4hf6+q8/+w8lMvMpkM6ku9JzcA4Y2Xry+BJTCBMKs9QZTOwO+7sJwQDARcqB1g5OBd8o9yNEUqeMASVbgnMQaZxYc49Bv/mJ8KsGBfuhDrG3i8RVBoJ7w3CESpAi805bAybbH78cF+rk+wbz1JALN1kjva8iGBUWR8dEvQX84VNh6+haXRSlI3089aZnqgSP9s7qFkzxk3gT1ooAB0NdOSppTj54/Kp44sjqoISo8OJw0SSubPyBd3nWz5GlVRTyre8nc58BbSKcqNFe/vwy186DvVfzkhxFrHm5qfGS1UWs=
-    - secure: g1Vh76CI/1rtXcPEtmArX7mMisFqRRi7e3MvJ9jMNAjKhg+Mlf4svFMbp88UDjm/YRJ58N2ggStYNb9JK20ZmKFZf3I2QXNIwX9T/Cc4QzYYOsWCeYmZPRSLkefGEuaPky6GA/weHDIoGInLbCRKp2O1JK9OTna0gXOprIVNJkcV5+bPtG9KnPt/q9Xg6cFKv3FiAcZVM0QekqYNM995qBjaiStSz9wZMvY/AY6O75BMi00Ga/EguqKJn/rH4mOU4P0l718Z1rIfIBFdCqBfaULGV5+v0QvRPWGSERFp/CGXCF4w4DOdgDLz54vVQtZhWsDVgLNAXVNp5s2+S8tMh5TMZZO0/e+vzW/GLQHFc+yqHAkIU/aIQPr3Pg6q6dkllsyITdaOsvEB1aG4i5rP23bokXGdEYrh0RZ760k59svzAYAZX/KQSPoAV29WAo6gTvrZMI8Z+vhzmSP78vj4CijsbZntfadPM/0cozPliY9Sg5VGpatlE8YetocwiGpblZ9C74OeCiKE033O0fKzvlF/g3CZX8LIONISptQKf4OjVzm9T2SdXIFyNnF99VtGZSQKezlvcqfkBRbSZ1ayH7ez0OBQdm+5ZSHHKqS+lSmeZv2K2asj+UDm4lDHNFY9KBcDl+JtIJp1jMjNLaZex4bSLnbT7OqGGtpa13mSKIY=
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - GITHUB_REPO: github.com/meliga/meliga.github.io.git
+  - REPO_TARGET_BRANCH: master
+  - secure: g1Vh76CI/1rtXcPEtmArX7mMisFqRRi7e3MvJ9jMNAjKhg+Mlf4svFMbp88UDjm/YRJ58N2ggStYNb9JK20ZmKFZf3I2QXNIwX9T/Cc4QzYYOsWCeYmZPRSLkefGEuaPky6GA/weHDIoGInLbCRKp2O1JK9OTna0gXOprIVNJkcV5+bPtG9KnPt/q9Xg6cFKv3FiAcZVM0QekqYNM995qBjaiStSz9wZMvY/AY6O75BMi00Ga/EguqKJn/rH4mOU4P0l718Z1rIfIBFdCqBfaULGV5+v0QvRPWGSERFp/CGXCF4w4DOdgDLz54vVQtZhWsDVgLNAXVNp5s2+S8tMh5TMZZO0/e+vzW/GLQHFc+yqHAkIU/aIQPr3Pg6q6dkllsyITdaOsvEB1aG4i5rP23bokXGdEYrh0RZ760k59svzAYAZX/KQSPoAV29WAo6gTvrZMI8Z+vhzmSP78vj4CijsbZntfadPM/0cozPliY9Sg5VGpatlE8YetocwiGpblZ9C74OeCiKE033O0fKzvlF/g3CZX8LIONISptQKf4OjVzm9T2SdXIFyNnF99VtGZSQKezlvcqfkBRbSZ1ayH7ez0OBQdm+5ZSHHKqS+lSmeZv2K2asj+UDm4lDHNFY9KBcDl+JtIJp1jMjNLaZex4bSLnbT7OqGGtpa13mSKIY=
+  - secure: hlkmjbxfqcnOq2iVC3OXZWK0MEtpBvhV9VdHlBraGRSjctihWWC7UgtcFMAUj+26KJFGV4nzLI5nZeV1rO3e094qIkcU3bQCN0ycHZEGiSWFph30LXbI42NY6UuqIiHQBnkT7YeZpMmITtWAbYAq7rRlYfhu2HS+eDrAKuUpcmqsToYmxUc9IYag4IAZx06I06PIVFKcyKsgkd/AmC4St3PqJfePi7c7zhXftNFTc7NP176z/qKAXOwzPcdbGYgugeplL/McvsJ1m1qk68rFKQ70w4hgjCXqqdGhcitQWWeRrdgr7dI5QV2O8xQHu9JNCEQqa8UEu36oO7W8+SFp+y7iNTpBUlXTPe3VH2CwdooGiAvDnDpsMDPuER3zu81Iw3kScqqpBV966E3BG0FZOmSinXHE/xCDFsHWsdOcw0DcSAZX/ImZJq4OVk10+pPqOxg/P9FWD9F3ubNXXhs5r6Z4SAXIL6+purXCCyTisf8mXzWVkajQn1L7y9cQ7Fe+zF43lOtXhhgIMDG6YoZJcjPKKg+BxmqGd4wYZrIH/8MWQt6ZjHM945YhvVkY3/mdhw5cb0qC/J9voJZUqt7A6rhnjTpIZoT5349z9GUt94H9CQUDuWeO1rKRv9m+N884C6WNb07kh/oaCUTKkod/yLmRFJEHcV80aYCzKI0A+wc=
