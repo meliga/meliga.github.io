@@ -389,11 +389,7 @@ section p{
 	filter: saturate(0%)
 }
 
-.item.retrato {
-	width: 500px;
-}
-
-.item.paisagem {
+.item {
 	width: 800px;
 }
 
@@ -408,11 +404,7 @@ display: none;
 }
 
 @media (max-width: 768px){
-	.item.retrato {
-		width: 500px;
-		height: 450px;
-	}
-	.item.paisagem {
+	.item {
 		width: 600px;
 		height: 450px;
 	}
