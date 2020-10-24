@@ -343,10 +343,6 @@ section p{
 	height: 600px;
 	margin: 1em 0.5em;
 	border-radius: 8px;
-	@media screen and (max-width: 500px) {
-		min-height: 200px;
-		min-width: 200px;
-	}
 }
 
 .item .foto figcaption {
@@ -365,22 +361,6 @@ section p{
 
 .item:last-child {
 	margin-right: 1em;
-}
-
-@media (max-width: 1024px){
-
-	.item:first-child{
-		margin-left: 50px;
-	}
-
-}
-
-@media (max-width: 767px){
-
-	.item:first-child{
-		margin-left: 30px;
-	}
-
 }
 
 
@@ -404,10 +384,15 @@ section p{
 	}
 
 .no-scrollbar::-webkit-scrollbar {
-display: none;
+	display: none;
 }
 
-@media (max-width: 768px){
+@media (max-width: 767px){
+
+	.item:first-child{
+		margin-left: 30px;
+	}
+
 	.item.retrato {
 		width: 500px;
 		height: 450px;
@@ -417,6 +402,13 @@ display: none;
 		height: 450px;
 	}
 
+}
+
+@media (max-width: 1024px){
+
+	.item:first-child{
+		margin-left: 50px;
+	}
 }
 
 @media (min-width: 1920px){
