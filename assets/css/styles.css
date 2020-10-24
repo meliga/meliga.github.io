@@ -400,10 +400,11 @@ section p{
 	}
 
 .no-scrollbar::-webkit-scrollbar {
-display: none;
+	display: none;
 }
 
 @media (max-width: 768px){
+
 	.item {
 		width: 600px;
 		height: 450px;
