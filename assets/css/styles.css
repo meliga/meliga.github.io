@@ -63,8 +63,18 @@
 		  url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
   }
 
+	@font-face {
+		font-family: "SF Pro Display Ultralight";
+		font-style: normal;
+		font-weight: 400;
+		src: url(../fonts/SF_Pro_Display/SF-Pro-Display-Ultralight.otf);
+	}
 
-
+	@font-face {
+		font-family: "New York";
+		font-style: normal;
+		src: url(../fonts/New_York/NewYork.ttf);
+	}
 
 html{
 	font: normal 16px 'San Francisco Display Thin', sans-serif;
@@ -112,7 +122,7 @@ section{
 }
 
 h1 {
-	font-family: "San Francisco Display Ultralight";
+	font-family: "SF Pro Display Ultralight";
 	text-transform: uppercase;
 }
 
@@ -248,10 +258,11 @@ section p{
 .where-i-work .capitular {
 	position: relative;
 	float: left;
-    margin-right: 16px;
-    height: 60px;
+  margin-right: 16px;
+  height: 60px;
 	color: #000;
-	font-family: 'NewYorkLarge-Bold';
+	font-family: 'New York';
+	font-weight: bold;
 	top: 22px;
 	font-size: 3em;
 }
