@@ -1,0 +1,672 @@
+/*-------------
+ 	General
+-------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@font-face {
+	font-family: "San Francisco Display Ultralight";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.eot?#iefix) format("embedded-opentype"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff2) format("woff2"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff) format("woff"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.ttf) format("truetype"), 
+		 url("fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.svg#San Francisco Display Ultralight") format("svg")
+  }
+  
+  @font-face {
+	font-family: "San Francisco Display Thin";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.eot?#iefix) format("embedded-opentype"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff2) format("woff2"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff) format("woff"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.ttf) format("truetype"), 
+		 url("fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.svg#San Francisco Display Thin") format("svg")
+  }
+  
+  @font-face {
+	font-family: "San Francisco Display Medium";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.eot?#iefix) format("embedded-opentype"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff2) format("woff2"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff) format("woff"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.ttf) format("truetype"), 
+		 url("fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.svg#San Francisco Display Medium") format("svg")
+  }
+  
+  @font-face {
+	font-family: "San Francisco Display Semibold";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.eot?#iefix) format("embedded-opentype"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff2) format("woff2"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff) format("woff"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.ttf) format("truetype"), 
+		 url("fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.svg#San Francisco Display Semibold") format("svg")
+  }
+  
+  @font-face {
+	font-family: "San Francisco Display Bold";
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.eot?#iefix) format("embedded-opentype"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff2) format("woff2"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff) format("woff"), 
+		 url(https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.ttf) format("truetype"),
+		  url("fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.svg#San Francisco Display Bold") format("svg")
+  }
+
+
+
+
+html{
+	font: normal 16px 'San Francisco Display Thin', sans-serif;
+	color: #000;
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a{
+	text-decoration-line: none;
+	color: inherit;
+	cursor: pointer;
+	border-bottom: 1px solid #000;
+	opacity: 0.9;
+}
+
+a:hover{
+	opacity: 1;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	padding: 125px 100px;
+}
+
+@media (max-width: 1024px){
+
+	section{
+		padding: 100px 50px;
+	}
+
+}
+
+@media (max-width: 767px){
+
+	section{
+		padding: 80px 30px;
+	}
+
+}
+
+h1 {
+	font-family: "San Francisco Display Ultralight";
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: "San Francisco Display Thin";
+}
+
+h1 b {
+	font-family: "San Francisco Display Thin";
+}
+
+@media (min-width: 360px){
+
+	h1 {
+		font-size: 26px;
+		line-height: 39px;
+	}
+}
+
+@media (min-width: 414px){
+
+	h1 {
+		font-size: 32px;
+		line-height: 40px;
+		max-width: 768px;
+	}
+
+	h2 {
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+
+@media (min-width: 1280px){
+
+	h1 {
+		font-size: 40px;
+		line-height: 66px;
+		max-width: 960px;
+	}
+	
+	h1.title {
+		font-size: 36px;
+		line-height: 44px;
+	}
+}
+
+
+section p{
+	font-family: 'San Francisco Display Thin', sans-serif;
+	margin-bottom: 35px;
+	padding: 0;
+	max-width: 680px;
+	margin-bottom: 15px;
+}
+
+@media (min-width: 360px){
+
+	section p {
+		font-size: 22px;
+		line-height: 33px;
+	}		
+}
+
+@media (min-width: 414px){
+
+	section p {
+		font-size: 24px;
+		line-height: 36px;
+	}	
+}
+
+@media (min-width: 768px){
+
+	section p {
+		font-size: 26px;
+		line-height: 39px;
+	}	
+}
+
+@media (min-width: 1279px){
+
+	section p {
+		font-size: 26px;
+		line-height: 39px;
+	}	
+}
+
+
+.grid{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+
+
+/*----------------
+ 	Who I am Section
+----------------*/
+
+.who-i-am {
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+	color: #000;
+	text-align: left;
+	align-items: flex-start;
+}
+
+.who-i-am::after {
+	position: absolute;
+	content: ' ';
+	background: #000;
+	width: 1px;
+	height: 200px;
+	top: 100%;
+	margin-top: -170px;
+	left: 50%;
+}
+/*----------------
+ 	Where I work Section
+----------------*/
+
+.where-i-work {
+	position: relative;
+	justify-content: center;
+	color: #000;
+	text-align: left;
+}
+
+.where-i-work .capitular {
+	position: relative;
+	float: left;
+    margin-right: 16px;
+    height: 60px;
+	color: #000;
+	font-family: 'NewYorkLarge-Bold';
+	top: 22px;
+	font-size: 3em;
+}
+
+
+/*--------------------
+ 	Day by day  Section
+---------------------*/
+
+.day-by-day {
+	position: relative;
+	justify-content: center;
+	color: #000;
+	text-align: left;
+	padding-right: 0px;
+	padding-left: 0px;
+}	
+
+@media (max-width: 767px){
+
+	.day-by-day .paragraphs{
+		padding: 0px 30px;
+	}
+
+}
+
+@media (max-width: 1024px){
+
+	.day-by-day .paragraphs{
+		padding: 100px 50px;
+	}
+
+}
+
+
+
+.carousel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto 1fr auto;
+	margin-bottom: 24px;
+	
+    @media screen and (max-width: 500px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.3fr 1fr auto 1fr;
+	}
+}
+	
+.carousel-main {
+    grid-area: main;
+    padding: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+.items {
+	position: relative;
+	width: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	white-space: nowrap;
+	transition: all 0.2s;
+	transform: scale(1);
+	will-change: transform;
+	user-select: none;
+	cursor: pointer;
+}
+
+.items.active {
+	background: rgba(255, 255, 255, 0.3);
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
+	transform: scale(1.01);
+}
+
+
+.item {
+	display: inline-block;
+	background: #aaa;
+	overflow: hidden;
+	height: 600px;
+	margin: 1em 0.5em;
+	border-radius: 8px;
+	@media screen and (max-width: 500px) {
+		min-height: 200px;
+		min-width: 200px;
+	}
+}
+
+.item .foto figcaption {
+	position: absolute;
+	background: #000;
+	color: #fff;
+	padding: 4px 8px 4px;
+	bottom: 32px;
+	margin-left: 16px;
+	border-radius: 4px;
+}
+
+.item:first-child {
+	margin-left: 1em;
+}
+
+.item:last-child {
+	margin-right: 1em;
+}
+
+@media (max-width: 1024px){
+
+	.item:first-child{
+		margin-left: 50px;
+	}
+
+}
+
+@media (max-width: 767px){
+
+	.item:first-child{
+		margin-left: 30px;
+	}
+
+}
+
+
+.item img {
+	width: 100%;
+	filter: saturate(0%)
+}
+
+.item.retrato {
+	width: 500px;
+}
+
+.item.paisagem {
+	width: 800px;
+}
+
+.no-scrollbar {
+	scrollbar-width: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	}
+
+.no-scrollbar::-webkit-scrollbar {
+display: none;
+}
+
+@media (max-width: 768px){
+	.item.retrato {
+		width: 500px;
+		height: 450px;
+	}
+	.item.paisagem {
+		width: 600px;
+		height: 450px;
+	}
+
+}
+
+@media (min-width: 1920px){
+	.item {
+		height: 600px;
+	}
+
+}
+
+/*--------------------
+ 	knowledge Section
+---------------------*/
+.knowledge{
+	position: relative;
+	justify-content: center;
+	color: #000;
+	text-align: left;
+}
+
+.icons {
+	display: flex;
+	margin: 40px 0px;
+  }
+  
+.icon {
+	flex-grow: 1;
+}
+
+.mobile {
+	display: none;
+}
+@media (max-width: 767px){
+	.icon:nth-child(n+6):nth-child(-n+10) {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+	}
+
+}
+
+
+  
+/*--------------------
+ 	Cases and Articles Section
+---------------------*/
+
+.cases-and-articles {
+	position: relative;
+	justify-content: center;
+	color: #000;
+	text-align: left;
+}
+
+.cases-and-articles .grid{
+	max-width: 680px;
+}
+
+.cases-and-articles .grid .articles{
+	flex-basis: 100%;
+}
+
+.cases,
+.articles {
+	border-bottom: 1px solid #f1f1f1;
+	padding-bottom: 60px;
+	margin-bottom: 40px;
+}
+
+
+.cases-and-articles .title {
+	font-family: 'San Francisco Display Semibold';
+	margin: 8px 0px;
+}
+
+.cases-and-articles .subtitle { 
+	margin-bottom: 32px;
+	color: #aaa;
+}	
+
+.cases-and-articles .cover {
+	margin-bottom: 32px;
+	max-width: 768px;
+}
+
+.cases-and-articles .cover img {
+	width: 100%;
+	background-clip: content-box;
+	background-size: cover;
+	background-position: center;
+	background-color: #f1f1f1;
+	border-radius: 8px;
+}
+
+.cases-and-articles .cover figcaption {
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+	color: #888;
+	margin-top: 10px;
+}
+
+.cases-and-articles .description { 
+	font: 22px 'San Francisco Display Thin', sans-serif;
+	line-height: 33px;
+}	
+
+
+.cases-and-articles a {
+	font-size: 22px;
+}
+
+.cases-and-articles .title a{
+	font-size: inherit;
+	line-height: inherit;
+	border-bottom: none;
+	margin: 8px 0px;
+}
+
+.cases-and-articles .external-link {
+	vertical-align: sub;
+}
+
+.cases-and-articles .badges {
+	margin-top: 32px;
+}
+
+.cases-and-articles .badge {
+	display: inline-block;	
+    padding: 4px 8px 3px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ccc;
+	border-radius: 3px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+
+/*---------------------
+ 	Contact Section
+---------------------*/
+
+.contact{
+	position: relative;
+	justify-content: center;
+	color: #fff;
+	text-align: left;
+}
+
+.contact main{
+	position: relative;
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+	align-items: flex-start;
+	flex-direction: column;
+
+	background-color: #000000;
+	width: 100%;
+	border-radius: 8px;
+	min-height: 80vh;
+	
+}
+
+.contact main .contact-information {
+	position: relative;
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    -ms-flex-align: center;
+	align-items: flex-start;
+	flex-direction: column;
+	flex-grow: 1
+}
+
+.contact main p {
+	color: #fff;
+}
+
+.contact main p.contacts-links {
+	font: 38px 'San Francisco Display Ultralight', sans-serif;
+	line-height: 57px;
+	max-width: 1024px;
+}
+
+.contact main p.contacts-links a{
+	border-bottom: 1px solid #fff;
+}
+
+.contact footer {
+	width: 100%;
+	position: relative;
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+	align-items: center;
+}
+
+.contact footer span {
+	font-size: 20px;
+	margin: 0px;
+}
+
+@media (max-width: 767px){
+
+	.contact main p.contacts-links a{
+		display: block;
+	}
+
+	.contact main p.contacts-links span{
+		display: none;
+	}
+
+	
+	.contact main{	
+		padding: 32px;
+		min-height: 90vh;
+	}
+
+	.contact footer p {
+		font-size: 18px;
+		margin: 0px;
+	}
+
+	.contact main p.contacts-links {
+		font: 28px 'San Francisco Display Ultralight', sans-serif;
+		line-height: 57px;
+		max-width: 1024px;
+	}
+}
+
+@media (max-width: 413px){
+	.contact main .contact-information p{
+		font-size: 20px;
+	}
+	.contact main p.contacts-links {
+		font: 22px 'San Francisco Display Ultralight', sans-serif;
+		line-height: 57px;
+		max-width: 1024px;
+	}
+}
+
+@media (min-width: 768px){
+	.contact main{	
+		padding: 50px;
+	}
+}
+
+@media (min-width: 1024px){
+	.contact main{	
+		padding: 100px;
+	}
+}
