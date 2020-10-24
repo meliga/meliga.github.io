@@ -299,8 +299,8 @@ section p{
 .carousel {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: auto 1fr auto;
-	margin-bottom: 24px;
+		grid-template-rows: auto 1fr auto;
+		margin-bottom: 24px;
 	
     @media screen and (max-width: 500px) {
       grid-template-columns: 1fr;
@@ -345,6 +345,9 @@ section p{
 	border-radius: 8px;
 }
 
+.item figure {
+	overflow: hidden;
+}
 .item .foto figcaption {
 	position: absolute;
 	background: #000;
@@ -370,7 +373,7 @@ section p{
 }
 
 .item.retrato {
-	width: 500px;
+	width: 450px;
 }
 
 .item.paisagem {
