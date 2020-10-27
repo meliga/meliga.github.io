@@ -66,7 +66,13 @@
 	@font-face {
 		font-family: "SF Pro Display Ultralight";
 		font-style: normal;
-		src: url(../fonts/SF_Pro_Display/SF-Pro-Display-Ultralight.otf);
+		src: url(../fonts/SF_Pro_Display/SF-Pro-Display-Thin.otf);
+	}
+
+	@font-face {
+		font-family: "SF Pro Display Light";
+		font-style: normal;
+		src: url(../fonts/SF_Pro_Display/SF-Pro-Display-Light.otf);
 	}
 
 	@font-face {
@@ -141,7 +147,7 @@ h3 {
 }
 
 h1 b {
-	font-family: "San Francisco Display Thin";
+	font-family: "SF Pro Display Light";
 }
 
 @media (min-width: 360px){
@@ -241,10 +247,10 @@ header{
 	z-index: 10;
 	width: 100%;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	color: #000;
-	padding: 35px 100px 0;
+	padding: 40px;
 }
 
 
@@ -268,18 +274,7 @@ header nav li:last-child{
 
 @media (max-width: 1000px){
 	header{
-		padding: 20px 50px;
-	}
-}
-
-
-@media (max-width: 700px){
-	header{
-		flex-direction: column;		
-	}
-
-	header h2{
-		margin-bottom: 15px;
+		padding: 20px 30px;
 	}
 }
 
@@ -461,7 +456,7 @@ header nav li:last-child{
 	}
 
 	.item.retrato {
-		width: 500px;
+		width: 338px;
 		height: 450px;
 	}
 	.item.paisagem {
@@ -520,7 +515,7 @@ header nav li:last-child{
 
   
 /*--------------------
- 	Cases and Articles Section
+ 	Cases and Articles Section 
 ---------------------*/
 
 .cases-and-articles {
