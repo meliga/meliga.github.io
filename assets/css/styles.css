@@ -135,6 +135,7 @@ section{
 h1 {
 	font-family: "SF Pro Display Ultralight";
 	text-transform: uppercase;
+	font-weight: lighter;
 }
 
 h2 {
@@ -142,11 +143,6 @@ h2 {
 }
 
 h3 {
-	font-family: "SF Pro Display Regular";
-
-}
-
-h1 b {
 	font-family: "SF Pro Display Light";
 }
 
@@ -192,7 +188,11 @@ section p{
 	margin-bottom: 35px;
 	padding: 0;
 	max-width: 680px;
-	margin-bottom: 15px;
+	margin-bottom: 32px;
+}
+
+p.em-dash {
+	margin-bottom: 0px;
 }
 
 @media (min-width: 360px){
