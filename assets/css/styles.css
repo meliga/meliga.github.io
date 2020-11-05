@@ -627,7 +627,7 @@ header nav li:last-child{
 }
 
 .case .capitular {
-	position: relative;
+	position: relative;	
 	float: left;
 	margin-right: 16px;
 	height: 60px;
