@@ -173,7 +173,8 @@ h3 {
 	h1 {
 		font-size: 40px;
 		line-height: 66px;
-		max-width: 940px;
+		max-width: 960px;
+		letter-spacing: 1px;
 	}
 	
 	h1.title {
